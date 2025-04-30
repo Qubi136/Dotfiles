@@ -1,11 +1,21 @@
 if status is-interactive
-	fastfetch
-	abbr -a -- ls 'eza'
-	abbr -a -- lsa 'eza -a'
-	abbr -a -- lsal 'eza -al'
-	abbr -a -- update 'sudo pacman -Syu'
+    #====================Exec=====================
+    fastfetch
+    #=============================================	
 
-	set fish_greeting ""
+    #===================Aliases===================
+    abbr -a -- ls eza
+    abbr -a -- lsa 'eza -a'
+    abbr -a -- lsal 'eza -al'
+    abbr -a -- update 'sudo pacman -Syu'
+    #=============================================
 
-	starship init fish | source
+    #==================Variables==================
+    set fish_greeting ""
+    #=============================================
+
+    #===================Plugins===================
+    starship init fish | source
+    #=============================================
+
 end
